@@ -7,6 +7,7 @@ class Alumno {
         this.nombre = nombre;
         this.apellido = apellido;
         this.edad = edad;
+        this.notas = [];
     }
 }
 
@@ -23,7 +24,7 @@ console.log(alumno);
 function cargarNotas () {
     i = 1;
     while (i<7) {
-        let nota = parseInt(prompt ("Ingrese una nota"));
+        let nota = alumno.notas.push (parseInt(prompt ("Ingrese una de sus calificaciones")));
         if (nota>=7){
         notasTotales = notasTotales + nota;
         notasAprobadas = notasAprobadas + nota;
@@ -36,6 +37,11 @@ function cargarNotas () {
         i++;
     }
 }
+
+// let obtenerNotasAprobadas = (alumno.notas) => {
+//     let notasAprobadas = alumno.notas.filter((nota) => nota >= 7)
+//     return notasAprobadas
+// }
 
 let notas = cargarNotas ();
 let promedio = notasTotales / totaldeNotas;
