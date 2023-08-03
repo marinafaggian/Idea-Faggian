@@ -31,8 +31,6 @@ body{
     margin: 20px;
 }
 
-
-
 .input {
     margin: 10px;
     border-radius: 1rem;
@@ -52,4 +50,17 @@ body{
     padding: 15px;
     border-radius: 1rem;
     font-family: 'Montserrat', sans-serif;
+    font-size: large;
+}
+
+.table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border: 1.5px black;
+}
+
+.encabezados, th, tr, td{
+    font-family: 'Montserrat', sans-serif;
+    border: 1px solid black;
 }
