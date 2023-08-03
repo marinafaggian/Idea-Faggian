@@ -3,10 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Borel&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <title>Promediador de notas</title>
 </head>
 <body>
-    <h1>Hola! Intento ser un calculador de promedio de notas</h1>
+    <header>
+        <h1 class="titulo">Hola! Intento ser un calculador de promedio de notas</h1>
+    </header>
+    <main>
+        <form action="">
+            <div class="infoAlumno">
+                <input  class="input" type="text" placeholder="Nombre">
+                <input  class="input" type="text" placeholder="Apellido">
+            </div>
+            <div class="inputNotas">
+                <input class="input"  type="number" placeholder="Nota 1" max="10">
+                <input class="input"  type="number" placeholder="Nota 2" max="10">
+                <input class="input"  type="number" placeholder="Nota 3" max="10">
+                <input class="input"  type="number" placeholder="Nota 4" max="10">
+                <input class="input"  type="number" placeholder="Nota 5" max="10">
+                <input class="input"  type="number" placeholder="Nota 6" max="10">
+            </div>
+            <div class="btn">
+                <button type="submit" class="btnCargar">Cargar Notas</button>
+            </div>
+        </form>
+    </main>
+    <section>
+
+    </section>
+
     <script src="proyecto.js"></script>
 </body>
 </html>

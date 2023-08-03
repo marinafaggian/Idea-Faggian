@@ -1,0 +1,55 @@
+body{
+    background-color: #FAF7F5;
+}
+
+.titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    font-family: 'Borel', cursive;
+}
+
+.infoAlumno {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.inputNotas {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+
+
+.input {
+    margin: 10px;
+    border-radius: 1rem;
+    border-color: rgb(0, 0,0,0.8);
+    padding: 5px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.input:hover {
+    background-color: rgb(239,237,236,0.5);
+}
+
+.btnCargar {
+    background-color: #72A5EA;
+    border-color: 02295D;
+    color: #ffffff;
+    padding: 15px;
+    border-radius: 1rem;
+    font-family: 'Montserrat', sans-serif;
+}

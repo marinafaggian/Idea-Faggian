@@ -12,8 +12,8 @@ function crearAlumno() {
     let alumno = new Alumno(nombre, apellido);
     return alumno;
 }
-let alumno = crearAlumno();
-console.log(alumno);
+// let alumno = crearAlumno();
+// console.log(alumno);
 
 function cargarNotas() {
     i = 1;
@@ -35,10 +35,10 @@ function sumarNotas(alumno) {
     return suma; 
 }  
 
-let notas = cargarNotas();
-let aprobadas = obtenerNotasAprobadas(alumno);
-let sumaDeNotas = sumarNotas(alumno);
-let promedio = sumaDeNotas / alumno.notas.length;
+// let notas = cargarNotas();
+// let aprobadas = obtenerNotasAprobadas(alumno);
+// let sumaDeNotas = sumarNotas(alumno);
+// let promedio = sumaDeNotas / alumno.notas.length;
 
 if (promedio >= 7) {
     alert(alumno.nombre + ", tu promedio es de " + Math.round(promedio) + ". Tu materia está aprobada");
