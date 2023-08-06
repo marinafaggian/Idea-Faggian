@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Borel&display=swap" rel="stylesheet">
@@ -20,7 +20,7 @@
         <form action="">
             <div class="infoAlumno">
                 <input  class="input" id="nombre" type="text" placeholder="Nombre">
-                <input  class="input apellido" type="text" placeholder="Apellido">
+                <input  class="input" id="apellido" type="text" placeholder="Apellido">
             </div>
             <div class="inputNotas">
                 <input class="input nota"  type="number" placeholder="Nota 1" max="10">
@@ -30,8 +30,8 @@
                 <input class="input nota"  type="number" placeholder="Nota 5" max="10">
                 <input class="input nota"  type="number" placeholder="Nota 6" max="10">
             </div>
-            <div class="btn">
-                <button type="submit" class="btnCargar">Cargar Notas</button>
+            <div class="btnDiv">
+                <button id="btn" type="submit" class="btnCargar">Cargar notas</button>
             </div>
         </form>
     </main>
@@ -53,6 +53,6 @@
         </table>
     </section>
 
-    <script src="proyecto.js"></script>
+    <script src="./js/proyecto.js"></script>
 </body>
 </html>
