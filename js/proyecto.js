@@ -15,8 +15,11 @@ class Alumno {
     }
 }
 
-// form.addEventListener("submit", function(e))
-//     e.preventDefault();
+function sumarNotas(alumno) {
+    const suma = alumno.notas.reduce((acumulador, nota) => acumulador + nota, 0);
+    console.log(suma,"Esto es la suma del array");
+    return suma;
+}
 
 function crearAlumno(e) {
     console.log("Hola, funcioná");
@@ -31,7 +34,9 @@ function crearAlumno(e) {
         notas [i].value = "";
     }
     alumno = new Alumno(nombre1, apellido1, notas1);
+    let sumaDeNotas = sumarNotas(alumno);
     console.log(alumno);
+    console.log(sumaDeNotas);
 }
 
 // let obtenerNotasAprobadas = (alumno) => {
@@ -39,16 +44,9 @@ function crearAlumno(e) {
 //     console.log(notasAprobadas, "Estas son las notas aprobadas");
 //     return notasAprobadas;
 // };
-function sumarNotas(alumno) {
-    const suma = alumno.notas.reduce((acumulador, nota) => acumulador + nota, 0);
-    console.log(suma,"Esto es la suma del array");
-    return suma;
-}
 
 // let aprobadas = obtenerNotasAprobadas(alumno);
-let sumaDeNotas = sumarNotas(alumno);
-let promedio = sumaDeNotas / alumno.notas.length;
-
+// let promedio = sumaDeNotas / alumno.notas.length;
 // if (promedio >= 7) {
 //     console.log(alumno.nombre + ", tu promedio es de " + Math.round(promedio) + ". Tu materia está aprobada");
 // } else {
@@ -61,4 +59,4 @@ let promedio = sumaDeNotas / alumno.notas.length;
 
 
 btn.addEventListener("click", crearAlumno);
-console.log(promedio, "este es el promedio de las notas");
+// console.log(promedio, "este es el promedio de las notas");
