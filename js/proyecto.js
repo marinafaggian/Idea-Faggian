@@ -23,7 +23,7 @@ function crearAlumno(e) {
     e.preventDefault();
     let nombre1 = nombre.value;
     let apellido1 = apellido.value;
-    alumno = new Alumno(nombre1, apellido1, notas1);
+    alumno = new Alumno(nombre1, apellido1);
     for (i = 0; i < notas.length; i++) {
         alumno.arrayNotas.push(notas[i].value);
         notas [i].value = "";
@@ -44,7 +44,7 @@ function sumarNotas(alumno) {
 }
 
 function promedio(alumno) {
-    const promedio1 = sumaDeNotas/alumno.arrayNotas.length;
+    const promedio1 = Math.round(sumaDeNotas/alumno.arrayNotas.length);
     console.log(promedio1, "promedio")
     return promedio1;
 }
@@ -59,15 +59,15 @@ function mostrarAlumno () {
     alumnos.forEach((alumno, index) => {
         listaDeAlumnos.innerHTML += `
             <tr scope="row">
-                <td>${alumno.nombre}</td>
-                <td>${alumno.apellido}</td>
-                <td>${alumno.arrayNotas[0]}</td>
-                <td>${alumno.arrayNotas[1]}</td>
-                <td>${alumno.arrayNotas[2]}</td>
-                <td>${alumno.arrayNotas[3]}</td>
-                <td>${alumno.arrayNotas[4]}</td>
-                <td>${alumno.arrayNotas[5]}</td>
-                <td>${prom}</td>
+                <td class="alumnos">${alumno.nombre}</td>
+                <td class="alumnos">${alumno.apellido}</td>
+                <td class="alumnos">${alumno.arrayNotas[0]}</td>
+                <td class="alumnos">${alumno.arrayNotas[1]}</td>
+                <td class="alumnos">${alumno.arrayNotas[2]}</td>
+                <td class="alumnos">${alumno.arrayNotas[3]}</td>
+                <td class="alumnos">${alumno.arrayNotas[4]}</td>
+                <td class="alumnos">${alumno.arrayNotas[5]}</td>
+                <td class="alumnos">${prom}</td>
                 <td><button class="delete" onclick="eliminarAlumno(${index})">Eliminar</button></td>
             </tr>            
         `;
@@ -75,4 +75,3 @@ function mostrarAlumno () {
 }
 
 btn.addEventListener("click", crearAlumno);
-console.log(alumnos);

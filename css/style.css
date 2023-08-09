@@ -71,18 +71,20 @@ body{
 .encabezados, th, tr, td{
     font-family: 'Montserrat', sans-serif;
     border: 1px solid black;
+    align-items: center;
 }
 
 .alumnos {
     font-family: 'Montserrat', sans-serif;
     border: 0.5px solid black;
+    text-align: center;
 }
 
 .delete {
     background-color: #FF4248;
     border-color: solid #FF0008;
     color: #ffffff;
-    padding: 15px;
+    padding: 8px;
     border-radius: 1rem;
     font-family: 'Montserrat', sans-serif;
 }
