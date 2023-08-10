@@ -8,6 +8,7 @@ let alumno;
 let notas1 = notas.value;
 let sumaDeNotas;
 let alumnos = [];
+let subirStorage;
 
 class Alumno {
     constructor(nombre, apellido) {
@@ -30,11 +31,17 @@ function crearAlumno(e) {
     }
     alumnos.push(alumno);
     console.log(alumno);
+    console.log(alumnos);
     sumaDeNotas = sumarNotas(alumno);
     alumno.promedio = promedio(alumno);
+    subirStorage = storage(alumnos);
     nombre.value = "";
     apellido.value = "";
     mostrarAlumno();
+}
+
+function storage(alumnos) {
+    localStorage.setItem("enJSON", JSON.stringify(alumnos));
 }
 
 function sumarNotas(alumno) {
