@@ -7,14 +7,14 @@ let listaDeAlumnos = document.getElementById("tbody");
 let alumno;
 let notas1 = notas.value;
 let sumaDeNotas;
-let prom;
 let alumnos = [];
 
 class Alumno {
-    constructor(nombre, apellido,) {
+    constructor(nombre, apellido) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.arrayNotas = [];
+        this.promedio = 0;
     }
 }
 
@@ -31,7 +31,7 @@ function crearAlumno(e) {
     alumnos.push(alumno);
     console.log(alumno);
     sumaDeNotas = sumarNotas(alumno);
-    prom = promedio(alumno);
+    alumno.promedio = promedio(alumno);
     nombre.value = "";
     apellido.value = "";
     mostrarAlumno();
@@ -67,7 +67,7 @@ function mostrarAlumno () {
                 <td class="alumnos">${alumno.arrayNotas[3]}</td>
                 <td class="alumnos">${alumno.arrayNotas[4]}</td>
                 <td class="alumnos">${alumno.arrayNotas[5]}</td>
-                <td class="alumnos">${prom}</td>
+                <td class="alumnos">${alumno.promedio}</td>
                 <td><button class="delete" onclick="eliminarAlumno(${index})">Eliminar</button></td>
             </tr>            
         `;
