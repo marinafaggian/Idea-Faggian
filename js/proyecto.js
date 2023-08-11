@@ -5,7 +5,6 @@ let btn = document.getElementById("btn");
 let notas = document.getElementsByClassName("input nota");
 let listaDeAlumnos = document.getElementById("tbody");
 let alumno;
-let notas1 = notas.value;
 let sumaDeNotas;
 let alumnos = [];
 let subirStorage;
@@ -20,7 +19,6 @@ class Alumno {
 }
 
 function crearAlumno(e) {
-    console.log("Hola, funcioná");
     e.preventDefault();
     let nombre1 = nombre.value;
     let apellido1 = apellido.value;
@@ -31,7 +29,6 @@ function crearAlumno(e) {
     }
     alumnos.push(alumno);
     console.log(alumno);
-    console.log(alumnos);
     sumaDeNotas = sumarNotas(alumno);
     alumno.promedio = promedio(alumno);
     subirStorage = storage(alumnos);
