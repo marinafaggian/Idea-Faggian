@@ -35,6 +35,7 @@ function crearAlumno(e) {
     nombre.value = "";
     apellido.value = "";
     mostrarAlumno();
+    toast();
 }
 
 function storage(alumnos) {
@@ -53,9 +54,27 @@ function promedio(alumno) {
     return promedio1;
 }
 
+function toast () {
+    Toastify({
+        text: "Alumno agregado!",
+        duration: 2000
+        }).showToast();
+}
+
 function eliminarAlumno (index) {
     alumnos.splice(index, 1);
+    toast2 ();
     mostrarAlumno();
+}
+
+function toast2 () {
+    Toastify({
+        text: "Alumno eliminado!",
+        duration: 2000,
+        style: {
+            background: "linear-gradient(180deg, #F01313, #FFA201)",
+        },
+        }).showToast();
 }
 
 function mostrarAlumno () {
