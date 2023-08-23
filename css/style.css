@@ -3,7 +3,15 @@ body{
 }
 
 .btnferiado {
-    
+    background-color: #69087C ;
+    color:#ffffff;
+    padding: 10px;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 1rem;
+}
+
+.btnferiado:hover{
+    background-color: #B508D8;
 }
 
 .titulo {
@@ -63,6 +71,10 @@ body{
     border-radius: 1rem;
     font-family: 'Montserrat', sans-serif;
     font-size: large;
+}
+
+.btnCargar:hover {
+    background-color: #006983;
 }
 
 .table {
