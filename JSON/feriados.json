@@ -1,0 +1,28 @@
+{
+    "feriados": [
+      {
+        "fecha": "Lunes 11 de Septiembre",
+        "motivo": "Día del Maestro"
+        },
+    {
+        "fecha": "Viernes 13 de Octubre",
+        "motivo": "Feriado con fines turísticos"
+        },
+    {
+        "fecha": "Lunes 15 de Octubre",
+        "motivo": "Día del Respeto a la Diversidad Cultural"
+    },
+    {
+        "fecha": "Lunes 20 de Noviembre",
+        "motivo": "Día de la Soberanía"
+    },
+    {
+        "fecha": "Viernes 8 de Diciembre",
+        "motivo": "Día de la Inmaculada Concepción de María"
+    },
+    {
+        "fecha": "Lunes 25 de Diciembre",
+        "motivo": "Navidad"
+    }
+    ]
+}

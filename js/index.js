@@ -61,20 +61,26 @@ function toast () {
         }).showToast();
 }
 
-function eliminarAlumno (index) {
-    alumnos.splice(index, 1);
-    toast2 ();
-    mostrarAlumno();
-}
-
-function toast2 () {
-    Toastify({
-        text: "Alumno eliminado!",
-        duration: 2000,
-        style: {
-            background: "linear-gradient(180deg, #F01313, #FFA201)",
-        },
-        }).showToast();
+function alert (index) {
+    Swal.fire({
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!'
+    }).then((result) => { 
+        if (result.isConfirmed) {
+            alumnos.splice(index, 1);
+            mostrarAlumno();
+            Swal.fire(
+                'Deleted!',
+                'Your file has been deleted.',
+                'success'
+                )
+        }
+      })
 }
 
 function mostrarAlumno () {
@@ -91,7 +97,7 @@ function mostrarAlumno () {
                 <td class="alumnos">${alumno.arrayNotas[4]}</td>
                 <td class="alumnos">${alumno.arrayNotas[5]}</td>
                 <td class="alumnos">${alumno.promedio}</td>
-                <td><button class="delete" onclick="eliminarAlumno(${index})">Eliminar</button></td>
+                <td><button class="delete" onclick="alert(${index})">Eliminar</button></td>
             </tr>            
         `;
     });
