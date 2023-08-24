@@ -16,11 +16,10 @@
 <body>
     <header>
         <div>
-            <button class="btnferiado">¿Cuándo son los próximos feriados?</button>
+            <button class="btnferiado" id="feriadosbtn">¿Cuándo son los próximos feriados?</button>
+            <ul id="feriados"></ul>
         </div>
-        <div>
-            <h1 class="titulo">Hola! Intento ser un calculador de promedio de notas</h1>
-        </div>
+        <h1 class="titulo">Hola! Intento ser un calculador de promedio de notas</h1>
     </header>
     <main>
         <form id="form" action="">
@@ -33,7 +32,7 @@
                 <input class="input nota"  type="number" placeholder="Nota 2" max="10">
                 <input class="input nota"  type="number" placeholder="Nota 3" max="10">
                 <input class="input nota"  type="number" placeholder="Nota 4" max="10">
-                <input class="input nota"  type="number" placeholder="Nota 5" max="10">
+                <input class="input nota"  type="number" placeholder="Nota 5" max="10">                    
                 <input class="input nota"  type="number" placeholder="Nota 6" max="10">
             </div>
             <div class="btnDiv">
@@ -59,6 +58,7 @@
     </section>
     <script src="https://cdn.jsdelivr.net/npm/toastify-js@1.12.0/src/toastify.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./js/feriados.js"></script>
     <script src="./js/index.js"></script>
 </body>
 </html>

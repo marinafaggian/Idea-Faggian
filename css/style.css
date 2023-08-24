@@ -104,3 +104,8 @@ body{
     border-radius: 1rem;
     font-family: 'Montserrat', sans-serif;
 }
+
+.feriados {
+    font-family: 'Montserrat', sans-serif;
+    margin: 5px
+}

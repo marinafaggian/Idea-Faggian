@@ -18,17 +18,18 @@ class Alumno {
     }
 }
 
-function crearAlumno(e) {
+const crearAlumno = (e) => {
     e.preventDefault();
     let nombre1 = nombre.value;
     let apellido1 = apellido.value;
     alumno = new Alumno(nombre1, apellido1);
     for (i = 0; i < notas.length; i++) {
-        alumno.arrayNotas.push(notas[i].value);
-        notas [i].value = "";
+        if (notas[i].value.length != 0){
+            alumno.arrayNotas.push(notas[i].value);
+            notas[i].value = "";
+        }
     }
     alumnos.push(alumno);
-    console.log(alumno);
     sumaDeNotas = sumarNotas(alumno);
     alumno.promedio = promedio(alumno);
     subirStorage = storage(alumnos);
@@ -38,67 +39,58 @@ function crearAlumno(e) {
     toast();
 }
 
-function storage(alumnos) {
-    localStorage.setItem("enJSON", JSON.stringify(alumnos));
-}
+const storage = (alumnos) => localStorage.setItem("enJSON", JSON.stringify(alumnos));
 
-function sumarNotas(alumno) {
+const sumarNotas = (alumno) => {
     const suma = alumno.arrayNotas.reduce((acumulador, nota) => acumulador + parseInt(nota), 0);
-    console.log(suma,"Esto es la suma del array");
     return suma;
 }
 
-function promedio(alumno) {
+const promedio = (alumno) => {
     const promedio1 = Math.round(sumaDeNotas/alumno.arrayNotas.length);
-    console.log(promedio1, "promedio")
     return promedio1;
 }
 
-function toast () {
-    Toastify({
-        text: "Alumno agregado!",
-        duration: 2000
-        }).showToast();
-}
+const toast = () => Toastify({text: "Alumno agregado!", duration: 2000}).showToast();
 
-function alert (index) {
+const alert = (index) => {
     Swal.fire({
-        title: 'Are you sure?',
-        text: "You won't be able to revert this!",
+        title: '¿Estás seguro de eliminar a este alumno?',
+        text: "No podrás revertir esta acción",
         icon: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
-        confirmButtonText: 'Yes, delete it!'
+        confirmButtonText: 'Sí, ¡eliminar!'
     }).then((result) => { 
         if (result.isConfirmed) {
             alumnos.splice(index, 1);
             mostrarAlumno();
             Swal.fire(
-                'Deleted!',
-                'Your file has been deleted.',
+                '¡Eliminado!',
+                'El alumno ha sido eliminado con éxito',
                 'success'
                 )
         }
       })
 }
 
-function mostrarAlumno () {
+const mostrarAlumno = () => {
     listaDeAlumnos.innerHTML = "";
     alumnos.forEach((alumno, index) => {
         listaDeAlumnos.innerHTML += `
             <tr scope="row">
                 <td class="alumnos">${alumno.nombre}</td>
                 <td class="alumnos">${alumno.apellido}</td>
-                <td class="alumnos">${alumno.arrayNotas[0]}</td>
-                <td class="alumnos">${alumno.arrayNotas[1]}</td>
-                <td class="alumnos">${alumno.arrayNotas[2]}</td>
-                <td class="alumnos">${alumno.arrayNotas[3]}</td>
-                <td class="alumnos">${alumno.arrayNotas[4]}</td>
-                <td class="alumnos">${alumno.arrayNotas[5]}</td>
+                <td class="alumnos">${alumno.arrayNotas[0] ? alumno.arrayNotas[0] : ""}</td>
+                <td class="alumnos">${alumno.arrayNotas[1] ? alumno.arrayNotas[1] : ""}</td>
+                <td class="alumnos">${alumno.arrayNotas[2] ? alumno.arrayNotas[2] : ""}</td>
+                <td class="alumnos">${alumno.arrayNotas[3] ? alumno.arrayNotas[3] : ""}</td>
+                <td class="alumnos">${alumno.arrayNotas[4] ? alumno.arrayNotas[4] : ""}</td>
+                <td class="alumnos">${alumno.arrayNotas[5] ? alumno.arrayNotas[5] : ""}</td>
                 <td class="alumnos">${alumno.promedio}</td>
                 <td><button class="delete" onclick="alert(${index})">Eliminar</button></td>
-            </tr>            
+            </tr>
         `;
     });
 }

@@ -1,28 +1,28 @@
 {
-    "feriados": [
+    "feriados" : [
       {
-        "fecha": "Lunes 11 de Septiembre",
-        "motivo": "Día del Maestro"
+          "motivo": "Día del Maestro",
+          "fecha": "Lunes 11 de Septiembre"
         },
     {
-        "fecha": "Viernes 13 de Octubre",
-        "motivo": "Feriado con fines turísticos"
+        "motivo": "Feriado con fines turísticos",
+        "fecha": "Viernes 13 de Octubre"
         },
     {
-        "fecha": "Lunes 15 de Octubre",
-        "motivo": "Día del Respeto a la Diversidad Cultural"
+        "motivo": "Día del Respeto a la Diversidad Cultural",
+        "fecha": "Lunes 15 de Octubre"
     },
     {
-        "fecha": "Lunes 20 de Noviembre",
-        "motivo": "Día de la Soberanía"
+        "motivo": "Día de la Soberanía",
+        "fecha": "Lunes 20 de Noviembre"
     },
     {
-        "fecha": "Viernes 8 de Diciembre",
-        "motivo": "Día de la Inmaculada Concepción de María"
+        "motivo": "Día de la Inmaculada Concepción de María",
+        "fecha": "Viernes 8 de Diciembre"
     },
     {
-        "fecha": "Lunes 25 de Diciembre",
-        "motivo": "Navidad"
+        "motivo": "Navidad",
+        "fecha": "Lunes 25 de Diciembre"
     }
     ]
 }
