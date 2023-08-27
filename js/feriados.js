@@ -7,7 +7,6 @@ const toggleListaVisibility = () => {
     isListaVisible ? lista.style.display = "block" : lista.style.display = "none";
     localStorage.setItem("flag", isListaVisible);
 }
-
 const incorporarFeriados = async () => {
     const resp = await fetch("../json/feriados.json");
     const feriados = await resp.json();
